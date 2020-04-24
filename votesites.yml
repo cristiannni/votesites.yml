@@ -1,0 +1,62 @@
+# 
+# Reward for any site
+# Similar to AnySiteReward
+# This requires the site to be configured in order to get the reward.
+VoteSites:
+  MinecraftServers:
+    Enabled: true
+    Name: MinecraftServers
+    Priority: 5
+    ServiceSite: MinecraftServer.org
+    VoteURL: https://minecraftservers.org/vote/581576
+    Money: 5000
+    VoteDelay: 24
+    WaitUntilVoteDelay: false
+    VoteDelayDaily: false
+    ForceOffline: false
+    Item:
+      Material: DIAMOND
+      Amount: 30
+    Rewards:
+  Commands:
+    Console:
+    - 'give %player% diamond'
+      Messages:
+        Player: '&f&lMultumim ca ai votat serverul Max3Semne'
+  Site2:
+    Enabled: false
+    Name: Site2
+    ServiceSite: PlanetMinecraft.com
+    VoteURL: link to vote URL here, used in /vote
+    VoteDelay: 24
+    Item:
+      Material: DIAMOND
+      Amount: 1
+    Rewards:
+     Commands:
+      AdvancedPriority:
+        Reward1:
+          Chance: 50
+          Messages:
+            Player: '&f&lMultumim ca ai votat serverul Max3Semne'
+        Reward2:
+          Chance: 20
+          Messages:
+            Player: You got second reward
+        Fallback:
+          Messages:
+            Player: You got unlucky
+      Messages:
+        Player: You voted
+  MinecraftServers_org:
+    Enabled: true
+    ServiceSite: MinecraftServers.org
+    VoteURL: VoteURL
+    VoteDelay: 24
+    Item:
+      Material: GRASS
+      Amount: 1
+    Rewards:
+      Messages:
+        Player: '&aThanks for voting on %ServiceSite%!'
+EverySiteReward: []
